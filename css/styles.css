@@ -1,5 +1,5 @@
 /* Include your fonts */
-
+/* Define a custom font named "Clouds" from two different file formats for better browser compatibility. */
 @font-face {
   font-family: "Clouds";
   src: url("../assets/fonts/APL385.woff2") format("woff2"),
@@ -10,6 +10,7 @@
 }
 
 /* Reset default styling and apply custom cursor */
+/* Reset padding and margin for all elements to zero and ensure box-sizing includes padding and border in the element's total width and height. */
 * {
   padding: 0;
   margin: 0;
@@ -17,6 +18,7 @@
 }
 
 /* Basic body styling */
+/* Style the body element to take up the full viewport height, set a background color and size, and use a monospace font. */
 body {
   height: 100vh;
   background-color: lightgrey;
@@ -27,6 +29,8 @@ body {
   font-size: 18px;
 }
 
+/* Alternate body styling for different themes */
+/* Change the background gradient, cursor style, and paragraph text color when applied to the body. */
 body.screen {
   background: linear-gradient(#06070a, #727171);
   cursor: auto;
@@ -46,6 +50,7 @@ body.room p {
 }
 
 /* Navigation bar styling */
+/* Style the navigation bar with a white dotted border, margins, padding, and rounded corners. Use flexbox for layout. */
 .navigation {
   border: 3px dotted white;
   margin: 10px;
@@ -60,6 +65,7 @@ body.room p {
 }
 
 /* Anchor link hover effects */
+/* Style the anchor links in the navigation bar with a custom font, no text decoration, red color, and a transition effect on hover. */
 .navigation a {
   transition: all 200ms linear;
   font-family: "Clouds";
@@ -68,17 +74,20 @@ body.room p {
   font-size: 30px;
 }
 
+/* Change the color and rotate the link slightly when hovered over. */
 .navigation a:hover {
   color: blue;
   transform: rotate(5deg);
 }
 
+/* Style the paragraph elements in the navigation bar with a grey color and larger font size. */
 .navigation p {
   font-size: 30px;
   color: grey;
 }
 
 /* Text boxes container styling */
+/* Style the container for text boxes with margins and use flexbox for layout. */
 .text-boxes-wrapper {
   margin: 10px;
   margin-top: 0;
@@ -88,6 +97,7 @@ body.room p {
 }
 
 /* Individual text box styling */
+/* Style individual text boxes with blue text, padding, height, width, scrollable overflow, and a dotted border with rounded corners. Customize the scrollbar and cursor. */
 .text-box {
   color: blue;
   padding: 10px;
@@ -106,17 +116,19 @@ body.room p {
   cursor: url(../assets/images/cursor.png) 128 128, auto;
 }
 
-/* Text box hover effects */
+/* Change the border and text color when the text box is hovered over. */
 .text-box:hover {
   border: 3px solid red;
   color: red;
 }
 
+/* Style the paragraph elements inside the text boxes with a bottom margin. */
 .text-box p {
   margin-bottom: 20px;
 }
 
 /* Responsive design for text boxes */
+/* Adjust the layout for smaller screens, stacking text boxes vertically and making them full width. */
 @media (max-width: 1000px) {
   .text-boxes-wrapper {
     flex-direction: column;
@@ -129,6 +141,7 @@ body.room p {
 }
 
 /* Form image container styling */
+/* Position the form image container fixed within the viewport, centered with flexbox, and make it non-interactive. */
 .form-image-wrapper {
   position: fixed;
   top: 10px;
@@ -144,12 +157,14 @@ body.room p {
 }
 
 /* Form image styling */
+/* Set a fixed width for the form image and apply a rotation animation. */
 .form-image {
   width: 200px;
   animation: rotation 8s infinite ease-in-out;
 }
 
 /* Floating ball styling */
+/* Position a floating ball absolutely within the viewport, size it, give it a circular shape, and apply a jumping animation. */
 .floating-ball {
   position: absolute;
   top: 10vh;
@@ -164,6 +179,7 @@ body.room p {
 }
 
 /* Keyframe animations */
+/* Define a rotation animation for the form image. */
 @keyframes rotation {
   from {
     transform: rotate(0deg);
@@ -173,6 +189,7 @@ body.room p {
   }
 }
 
+/* Define a jumping animation for the floating ball, moving it around the viewport. */
 @keyframes jumping-around {
   0% {
     top: 95vh;
